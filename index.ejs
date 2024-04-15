@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <title>Mock OAuth2 Server</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <h2>Mock OAuth2 Server</h2>
+            <p>
+              This project is an OAuth2 server implementation for testing purposes. 
+              See <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>. 
+              It's useful for testing client applications that authenticate to other services via OAuth. 
+              Rather than using the external service, which requires API keys and credentials for users, you can use this service as
+              a stub for the external service. It accepts any email address and password combination. It does not provide any sort
+              of long term storage of access or refresh tokens.
+            </p>
+
+            <h2>Using for ST Schema Development</h2>
+            
+            <p>
+              To configure a SmartThings ST Schema connector to use this service, remix the service and set the <code>EXPECTED_CLIENT_ID</code>
+              and <code>EXPECTED_CLIENT_SECRET</code> variables in the <code>.env</code> file to values of you choosing. You don't have to set these values
+              but doing so will allow you to restrict the use of your server to only your ST schema integrations. 
+            </p>
+            <p>
+              When the server restarts after you edit the variable it will log the values you should use to configure the ST Schema
+              connector in the <a href="https://smartthings.developer.samsung.com/workspace/">SmartThings Developer Workspace</a>. 
+              The default values, if you don't specify your own client ID and 
+              secret, are:
+            </p>
+            <pre>
+            Client ID:         dummy-client-id
+            Client Secret:     dummy-client-secret
+            Authorization URI: /oauth/login
+            Refresh Token URL: /oauth/token</pre>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+</body>
+</html>

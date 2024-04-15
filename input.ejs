@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <title>Mock OAuth2 Server</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+
+            <h2>Mock OAuth2 Server</h2>
+          
+            <form action="/login-as">
+                <div class="form-group">
+                    <label for="email">UserName: </label>
+                    <input type="email" class="form-control" placeholder="you@gmail.com"
+                           name="email" id="email" value="<%= username %>"/ >
+                </div>
+                 <div class="form-group">
+                    <label for="name">Password: </label>
+                    <input type="password" name="name" id="name" class="form-control"  value="<%= password %>" />
+                </div>
+                <div class="form-group">
+          <label for="expires_in">Token expiration: </label>
+          <select class="custom-select" name="expires_in" id="expires_in">
+            <option value="2538000">30 Days</option>
+            <option value="84600" selected>1 Day</option>
+            <option value="3600">1 Hour</option>
+            <option value="300">5 minutes</option>
+            <option value="120">2 minutes</option>
+            <option value="60">1 minute</option>
+          </select>
+        </div>
+        <div class="form-group" id="oauth-buttons">
+          <input class="oauth btn btn-primary" type="submit" name="signin" value="Authorize"/>
+        </div>
+            </form>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+</body>
+</html>

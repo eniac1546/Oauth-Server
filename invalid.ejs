@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <title>401 Invalid Auth Page Parameters</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <h2>401 Invalid Auth Page Parameters</h2>
+            <ul>
+              <% for(msg of errorMessages) { %>
+                <li><%= msg %></li>
+              <% } %>    
+            </ul>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+</body>
+</html>
