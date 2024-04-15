@@ -6,11 +6,6 @@
     "scripts": {
       "start": "node server.js"
     },
-    "author": "SmartThings, Inc",
-    "contributors": [
-      "Bence Eros <ebence88@gmail.com>"
-    ],
-    "license": "ISC",
     "dependencies": {
       "body-parser": "^1.17.1",
       "dotenv": "^6.2.0",
